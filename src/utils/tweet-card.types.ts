@@ -16,3 +16,17 @@ export type TweetType = {
   likedCount: number;
   comments: CommentType[];
 };
+
+export type ChatMessage = {
+  sender: string;
+  message: string;
+  timestamp: string;
+};
+
+export type Chat = {
+  id: number;
+  name: string;
+  profilePhoto: string;
+  chats: ChatMessage[];
+};
+
