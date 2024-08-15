@@ -80,8 +80,8 @@ const Notifications: React.FC = () => {
         }}
         trigger={["click"]}
       >
-          <Badge count={notifications.length} offset={[5, 23]}>
-            <button className="flex gap-3 w-fit py-2 px-3 rounded-full hover:bg-zinc-700">
+          <Badge count={notifications.length} offset={[-20, 23]}>
+            <button className="flex gap-3 w-fit py-2 px-3 pr-9 rounded-full hover:bg-zinc-700">
               <img src={Bell} alt="" />
               <p className="text-white text-xl">Notification</p>
             </button>
