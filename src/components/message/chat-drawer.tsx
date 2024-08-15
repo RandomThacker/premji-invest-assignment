@@ -29,6 +29,13 @@ const ChatDrawer = ({ chat, expanded, onClose }: ChatDrawerProps) => {
     setMessage("");
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevents the default behavior of the Enter key (e.g., form submission)
+      handleSendMessage();
+    }
+  };
+
   return (
     <div className="relative">
       <div
@@ -55,6 +62,7 @@ const ChatDrawer = ({ chat, expanded, onClose }: ChatDrawerProps) => {
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={handleKeyDown} // Add this line
               placeholder="Type a message..."
               className="flex-grow bg-transparent border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white"
             />
