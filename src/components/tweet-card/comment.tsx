@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentType } from '../utils/tweet-card.types';
+import { CommentType } from '../../utils/tweet-card.types';
 
 const Comment: React.FC<{ comment: CommentType }> = ({ comment }) => {
     return (
