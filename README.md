@@ -51,7 +51,7 @@ Follow these steps to run the project locally:
 1. **Clone the repository**:
 
    ```sh
-   git clone <repository-ur>
+   git clone https://github.com/RandomThacker/premji-invest-assignment.git
    cd premji-invest-assignment
    ```
 
