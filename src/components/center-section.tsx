@@ -1,13 +1,22 @@
-import React from 'react'
-import TweetCard from './tweet-card'
+import React, { useState, useEffect } from 'react';
+import TweetCard from './tweet-card';
+import tweetData from '../utils/data.json'; // Import your JSON data
+import { TweetType } from '../utils/tweet-card.types';
 
-const CenterSection = () => {
+const CenterSection: React.FC = () => {
+  const [tweets, setTweets] = useState<TweetType[]>([]);
+
+  useEffect(() => {
+    setTweets(tweetData); // Assign the JSON data to the state
+  }, []);
+
   return (
     <div className='flex items-center flex-col'>
-      <TweetCard profilePicture={'https://avatarfiles.alphacoders.com/222/thumb-1920-222663.jpg'} name={'Aryan'} username={'@aryan'} content=' Lorem Ipsum has been the industry standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum' likedCount={5} commentCount={1}/>
-      <TweetCard profilePicture={'https://avatarfiles.alphacoders.com/222/thumb-1920-222663.jpg'} name={'Aryan'} username={'@aryan'} content=' Lorem Ipsum has been the industry standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum' likedCount={2} commentCount={3}/>
+      {tweets.map((tweet, index) => (
+        <TweetCard key={index} tweet={tweet} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default CenterSection
+export default CenterSection;
