@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# Premji Invest Assignment
+![image](https://github.com/user-attachments/assets/5e634cd4-9cc5-40d2-babb-c23f8aefef2b)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Premji Invest Assignment, social media wall using ReactJS. It features an engaging and intuitive interface that allows users to create posts, like and comment on content, and interact with friends via a collapsible chat window.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
 
-## Expanding the ESLint configuration
+- **Post Creation**: Users can draft and share posts with friends.
+- **Post Cards**:
+  - Option to delete posts via a menu with three dots.
+  - Ability to like and comment on posts.
+- **Home Screen**:
+  - Collapsible chat window for better user experience.
+  - Collapsible friend list with smooth animation for easy access.
+  - A dedicated chat window appears in the bottom right corner, ensuring the main content remains the focus.
+- **Navigation Bar**:
+  - Side navigation bar to go with modern ui.
+  - Profile dropdown.
+  - Dropdown notification component with dynamic badge
+- **Messaging**:
+  - Complete messaging functionality with timestamps and message previews.
+  - Design inspired by Linkedin and Twitter.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+  - React: ^18.2.0
+  - Ant Design (antd): ^5.17.3
+  - Tailwind CSS: ^3.4.3
+  - Typescript
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Utilities**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+  - Tailwind Merge: ^2.3.0
+  - @ant-design/icons: ^5.3.7
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Build Tools**:
+
+  - Vite: ^5.2.0
+
+## Note
+Mobile responsiveness couldn't be implemented due to time constraints
+
+## Installation and Running Locally
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**:
+
+   ```sh
+   git clone https://github.com/RandomThacker/premji-invest-assignment.git
+   cd premji-invest-assignment
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```sh
+   npm run dev
+   ```
