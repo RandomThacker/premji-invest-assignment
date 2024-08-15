@@ -1,22 +1,48 @@
-import React, { useState } from 'react';
-import Heart from '../assets/icons/heart.svg';
-import RedHeart from '../assets/icons/red-heart.svg';
-import CommentIcon from '../assets/icons/comment.svg';
-import { TweetType } from '../utils/tweet-card.types';
-import Comment from './comment';
+import React, { useState } from "react";
+import Heart from "../assets/icons/heart.svg";
+import RedHeart from "../assets/icons/red-heart.svg";
+import CommentIcon from "../assets/icons/comment.svg";
+import { TweetType, CommentType } from "../utils/tweet-card.types";
+import Comment from "./comment";
+import userData from "../utils/user-data.json";
 
 type TweetCardProps = {
   tweet: TweetType;
 };
 
 const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
-  const { profilePicture, name, username, content, likedCount, comments } = tweet;
+  const { profilePicture, name, username, content, likedCount, comments } =
+    tweet;
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(likedCount);
+  const [newComment, setNewComment] = useState("");
+  const [allComments, setAllComments] = useState<CommentType[]>(comments);
+  const [showComments, setShowComments] = useState(false);
 
   const handleLikeClick = () => {
     setIsLiked(!isLiked);
-    setLikeCount((prevCount: number) => (isLiked ? prevCount - 1 : prevCount + 1));
+    setLikeCount((prevCount) => (isLiked ? prevCount - 1 : prevCount + 1));
+  };
+  const handleShowComments = () => {
+    setShowComments(!showComments);
+  };
+
+  const handleAddComment = () => {
+    if (newComment.trim() === "") return; // Prevent empty comments
+
+    const userProfilePicture = userData.profilePicture; // Replace with actual image URL
+    const userName = userData.name;
+    const userUsername = userData.username;
+
+    const newCommentData: CommentType = {
+      profilePicture: userProfilePicture,
+      name: userName,
+      username: userUsername,
+      comment: newComment,
+    };
+
+    setAllComments((prevComments) => [...prevComments, newCommentData]);
+    setNewComment(""); // Clear the input field after adding the comment
   };
 
   return (
@@ -41,22 +67,48 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
       <div className="flex gap-4 mt-2">
         <div className="flex gap-1 items-center">
           <button onClick={handleLikeClick}>
-            <img src={isLiked ? RedHeart : Heart} className="h-5 w-5" alt="heart" />
+            <img
+              src={isLiked ? RedHeart : Heart}
+              className="h-5 w-5"
+              alt="heart"
+            />
           </button>
           <p className="text-zinc-500 text-sm">{likeCount}</p>
         </div>
         <div className="flex gap-1 items-center">
-          <button>
+          <button onClick={handleShowComments}>
             <img src={CommentIcon} className="h-5 w-5" alt="comment" />
           </button>
-          <p className="text-zinc-500 text-sm">{comments.length}</p>
+          <p className="text-zinc-500 text-sm">{allComments.length}</p>
         </div>
       </div>
 
       {/* Comment Section */}
-      {comments.map((comment, index) => (
-        <Comment key={index} comment={comment} />
-      ))}
+      <div className={`${showComments ? "block" : "hidden"}`}>
+      <div className="border-t border-zinc-700 mb-3 mt-2" />
+
+        {allComments.map((comment, index) => (
+          <Comment key={index} comment={comment} />
+        ))}
+
+      {/* Input Field for Adding Comment */}
+      <div className="flex items-center gap-2 mt-4">
+        <input
+          type="text"
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          placeholder="Write a comment..."
+          className="bg-[#2C2F33] text-white p-2 rounded-md w-full"
+        />
+        <button
+          onClick={handleAddComment}
+          className="bg-blue-500 text-white px-2 py-1 rounded-md"
+        >
+          Post
+        </button>
+      </div>
+      </div>
+
     </div>
   );
 };
