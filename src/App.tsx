@@ -1,11 +1,11 @@
 import './App.css'
-import CenterSection from './components/center-section'
+import TweetWall from './components/tweet-wall'
 
 function App() {
 
   return (
     <div className=' h-screen w-full no-scrollbar'>
-      <CenterSection/>
+      <TweetWall/>
     </div>
   )
 }
