@@ -3,7 +3,7 @@ import { CommentType } from '../utils/tweet-card.types';
 
 const Comment: React.FC<{ comment: CommentType }> = ({ comment }) => {
     return (
-        <div className="flex gap-2 items-start">
+        <div className="flex gap-2 my-2 items-start">
             <img
                 src={comment.profilePicture}
                 alt="profile-image"
