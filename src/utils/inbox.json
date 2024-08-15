@@ -1,0 +1,97 @@
+[
+    {
+      "id": 1,
+      "name": "Alice",
+      "profilePhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ96pzePsykcWTvHFC4IWSv6G3-C5MhwI8Fg&s",
+      "chats": [
+        { "sender": "Me", "message": "Hey Alice, how are you?", "timestamp": "2024-08-15T10:00:00Z" },
+        { "sender": "Alice", "message": "Hi! I'm doing well, how about you?", "timestamp": "2024-08-15T10:02:00Z" },
+        { "sender": "Me", "message": "I'm good too, thanks! Any plans for the weekend?", "timestamp": "2024-08-15T10:05:00Z" },
+        { "sender": "Alice", "message": "Not yet, just planning to relax. You?", "timestamp": "2024-08-15T10:07:00Z" },
+        { "sender": "Me", "message": "Same here, might watch a movie.", "timestamp": "2024-08-15T10:09:00Z" },
+        { "sender": "Alice", "message": "Sounds good! Let me know if you need suggestions.", "timestamp": "2024-08-15T10:12:00Z" },
+        { "sender": "Me", "message": "Sure thing, thanks!", "timestamp": "2024-08-15T10:14:00Z" },
+        { "sender": "Alice", "message": "Anytime! 😊", "timestamp": "2024-08-15T10:16:00Z" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "profilePhoto": "https://www.dumpaday.com/wp-content/uploads/2017/01/random-pictures-116.jpg",
+      "chats": [
+        { "sender": "Me", "message": "Hey Bob, did you finish the report?", "timestamp": "2024-08-14T09:00:00Z" },
+        { "sender": "Bob", "message": "Just wrapping it up now. Should be done in an hour.", "timestamp": "2024-08-14T09:02:00Z" },
+        { "sender": "Me", "message": "Great! Let me know if you need any help.", "timestamp": "2024-08-14T09:05:00Z" },
+        { "sender": "Bob", "message": "Will do, thanks for the offer.", "timestamp": "2024-08-14T09:07:00Z" },
+        { "sender": "Me", "message": "No worries, happy to help!", "timestamp": "2024-08-14T09:10:00Z" },
+        { "sender": "Bob", "message": "Appreciate it! 😊", "timestamp": "2024-08-14T09:12:00Z" },
+        { "sender": "Me", "message": "You're welcome! 👍", "timestamp": "2024-08-14T09:15:00Z" },
+        { "sender": "Bob", "message": "Report is done! Sending it over now.", "timestamp": "2024-08-14T09:20:00Z" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "profilePhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyLTD-EEs8bxwuZtNSWPEROeaAu3FvGnlGQ6BhxGc4fuuphh9jJz1OWtJQII7BMUlrCHA&usqp=CAU",
+      "chats": [
+        { "sender": "Charlie", "message": "Hey, are we still on for lunch tomorrow?", "timestamp": "2024-08-13T11:00:00Z" },
+        { "sender": "Me", "message": "Yes, looking forward to it!", "timestamp": "2024-08-13T11:02:00Z" },
+        { "sender": "Charlie", "message": "Awesome! Where do you want to go?", "timestamp": "2024-08-13T11:05:00Z" },
+        { "sender": "Me", "message": "How about that new Italian place?", "timestamp": "2024-08-13T11:07:00Z" },
+        { "sender": "Charlie", "message": "Sounds perfect! I'll see you there at 1?", "timestamp": "2024-08-13T11:09:00Z" },
+        { "sender": "Me", "message": "Yep, 1 PM it is. See you then!", "timestamp": "2024-08-13T11:12:00Z" },
+        { "sender": "Charlie", "message": "Great, see you tomorrow!", "timestamp": "2024-08-13T11:14:00Z" },
+        { "sender": "Me", "message": "Take care!", "timestamp": "2024-08-13T11:16:00Z" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "David",
+      "profilePhoto": "https://i.pinimg.com/736x/51/36/c6/5136c6170576624611319370a1ddd3a0.jpg",
+      "chats": [
+        { "sender": "David", "message": "Hey, can you send me the notes from last meeting?", "timestamp": "2024-08-12T14:00:00Z" },
+        { "sender": "Me", "message": "Sure, I'll send them over in a minute.", "timestamp": "2024-08-12T14:02:00Z" },
+        { "sender": "David", "message": "Thanks, appreciate it!", "timestamp": "2024-08-12T14:05:00Z" },
+        { "sender": "Me", "message": "No problem!", "timestamp": "2024-08-12T14:07:00Z" },
+        { "sender": "David", "message": "Got it, thanks again!", "timestamp": "2024-08-12T14:10:00Z" },
+        { "sender": "Me", "message": "You're welcome!", "timestamp": "2024-08-12T14:12:00Z" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Eva",
+      "profilePhoto": "https://images7.memedroid.com/images/UPLOADED894/5f0502441774c.jpeg",
+      "chats": [
+        { "sender": "Me", "message": "Hi Eva, did you see the latest episode?", "timestamp": "2024-08-11T19:00:00Z" },
+        { "sender": "Eva", "message": "Yes! It was amazing, what did you think?", "timestamp": "2024-08-11T19:02:00Z" },
+        { "sender": "Me", "message": "I loved it! Can't wait for the next one.", "timestamp": "2024-08-11T19:05:00Z" },
+        { "sender": "Eva", "message": "Same here, it's getting so intense!", "timestamp": "2024-08-11T19:07:00Z" },
+        { "sender": "Me", "message": "Totally! Let's catch up after the next episode.", "timestamp": "2024-08-11T19:09:00Z" },
+        { "sender": "Eva", "message": "Absolutely, looking forward to it!", "timestamp": "2024-08-11T19:12:00Z" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Frank",
+      "profilePhoto": "https://pm1.narvii.com/7119/b0abdf491cffde4bdf95850956c1b15a5591a4b5r1-712-707v2_hq.jpg",
+      "chats": [
+        { "sender": "Frank", "message": "Hey, are you free for a call later?", "timestamp": "2024-08-10T15:00:00Z" },
+        { "sender": "Me", "message": "Yeah, I'm available after 4 PM.", "timestamp": "2024-08-10T15:02:00Z" },
+        { "sender": "Frank", "message": "Great, I'll call you then.", "timestamp": "2024-08-10T15:05:00Z" },
+        { "sender": "Me", "message": "Sounds good, talk to you later!", "timestamp": "2024-08-10T15:07:00Z" },
+        { "sender": "Frank", "message": "See you!", "timestamp": "2024-08-10T15:10:00Z" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Grace",
+      "profilePhoto": "https://thechive.com/wp-content/uploads/2019/12/person-hilariously-photoshops-animals-onto-random-things-xx-photos-25.jpg?attachment_cache_bust=3136487&quality=85&strip=info&w=400",
+      "chats": [
+        { "sender": "Grace", "message": "Hey, did you get the email I sent?", "timestamp": "2024-08-09T12:00:00Z" },
+        { "sender": "Me", "message": "Yes, I got it. I'll review it and get back to you.", "timestamp": "2024-08-09T12:02:00Z" },
+        { "sender": "Grace", "message": "Awesome, thanks!", "timestamp": "2024-08-09T12:05:00Z" },
+        { "sender": "Me", "message": "No problem, talk soon!", "timestamp": "2024-08-09T12:07:00Z" }
+      ]
+    }
+  ]
+  
