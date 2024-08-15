@@ -9,7 +9,9 @@ const TweetWall: React.FC = () => {
     setNewTweetContent,
     tweets,
     userData,
+    handleDeleteTweet
   } = useTweetWall();
+
   return (
     <div className="flex items-center flex-col no-scrollbar">
       {/* Input Field for Adding New Tweet */}
@@ -37,7 +39,7 @@ const TweetWall: React.FC = () => {
 
       {/* Render Existing Tweets */}
       {tweets.map((tweet) => (
-        <TweetCard key={tweet.id} tweet={tweet} />
+        <TweetCard key={tweet.id} tweet={tweet} onDelete={handleDeleteTweet} />
       ))}
     </div>
   );

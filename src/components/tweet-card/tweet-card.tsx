@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Heart from "../../assets/icons/heart.svg";
 import RedHeart from "../../assets/icons/red-heart.svg";
 import CommentIcon from "../../assets/icons/comment.svg";
+import MoreOptionsIcon from "../../assets/icons/more-options.svg"; 
 import { TweetType } from "../../utils/tweet-card.types";
 import Comment from "./comment";
 import UseTweetCard from "./use-tweet-card";
 
 type TweetCardProps = {
   tweet: TweetType;
+  onDelete: (id: number) => void; // Callback function for deletion
 };
 
-const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
+const TweetCard: React.FC<TweetCardProps> = ({ tweet, onDelete }) => {
   const {
     id,
     setNewComment,
@@ -28,8 +30,33 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
     newComment,
   } = UseTweetCard(tweet);
 
+  const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleMenuClick = () => {
+    setShowMenu(!showMenu);
+  };
+
+  const handleDelete = () => {
+    onDelete(id); // Call the onDelete callback
+    setShowMenu(false); // Close the menu after deleting
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setShowMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div key={id} className="bg-[#1B1F23] flex flex-col gap-2 rounded-md p-4 w-[550px] mb-2">
+    <div key={id} className="bg-[#1B1F23] flex flex-col gap-2 rounded-md p-4 w-[550px] mb-2 relative">
       {/* Header */}
       <div className="flex gap-2 items-center">
         <img
@@ -41,6 +68,26 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
           <p className="text-sm font-medium text-zinc-200">{name}</p>
           <p className="text-xs font-normal text-[#999]">@{username}</p>
         </div>
+        <button
+          onClick={handleMenuClick}
+          className="absolute top-2 right-2 p-1"
+        >
+          <img src={MoreOptionsIcon} className="h-5 w-5" alt="more options" />
+        </button>
+        {/* Dropdown Menu */}
+        {showMenu && (
+          <div
+            ref={menuRef}
+            className="absolute top-10 right-2 bg-[#2C2F33] text-white rounded-md shadow-lg"
+          >
+            <button
+              onClick={handleDelete}
+              className="block px-4 py-2 text-sm hover:bg-[#3C3F43] rounded-md"
+            >
+              Delete
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Content */}

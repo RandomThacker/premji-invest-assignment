@@ -7,13 +7,13 @@ const useTweetWall = () => {
     const [tweets, setTweets] = useState<TweetType[]>([]);
     const [newTweetContent, setNewTweetContent] = useState("");
     const [nextId, setNextId] = useState(4);
-  
+
     useEffect(() => {
       setTweets(tweetData);
       const maxId = tweetData.reduce((max, tweet) => Math.max(max, tweet.id), 0);
       setNextId(maxId + 1);
     }, []);
-  
+
     const handleAddTweet = () => {
       if (newTweetContent.trim() !== "") {
         const newTweet: TweetType = {
@@ -30,8 +30,12 @@ const useTweetWall = () => {
         setNextId(nextId + 1);
       }
     };
-  
-  return {handleAddTweet, newTweetContent, setNewTweetContent, tweets, userData}
+
+    const handleDeleteTweet = (id: number) => {
+      setTweets(tweets.filter(tweet => tweet.id !== id));
+    };
+
+    return { handleAddTweet, newTweetContent, setNewTweetContent, tweets, userData, handleDeleteTweet };
 }
 
-export default useTweetWall
+export default useTweetWall;
