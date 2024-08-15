@@ -9,6 +9,7 @@ export type CommentType = {
 
 export type TweetType = {
   profilePicture: string;
+  id: number;
   name: string;
   username: string;
   content: string;

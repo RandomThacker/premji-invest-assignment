@@ -12,6 +12,7 @@ type TweetCardProps = {
 
 const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
   const {
+    id,
     setNewComment,
     handleAddComment,
     handleShowComments,
@@ -28,7 +29,7 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
   } = UseTweetCard(tweet);
 
   return (
-    <div className="bg-[#1B1F23] flex flex-col gap-2 rounded-md p-4 w-[550px] mb-2">
+    <div key={id} className="bg-[#1B1F23] flex flex-col gap-2 rounded-md p-4 w-[550px] mb-2">
       {/* Header */}
       <div className="flex gap-2 items-center">
         <img
@@ -83,14 +84,14 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
               type="text"
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
-              placeholder="Write a comment..."
-              className="bg-[#2C2F33] text-white p-2 rounded-md w-full"
+              placeholder="Add a comment..."
+              className="bg-zinc-800 text-zinc-300 p-2 rounded-md w-full text-sm"
             />
             <button
               onClick={handleAddComment}
-              className="bg-blue-500 text-white px-2 py-1 rounded-md"
+              className="text-white bg-blue-500 rounded-full px-3 py-1 text-sm font-medium"
             >
-              Post
+              Comment
             </button>
           </div>
         </div>
