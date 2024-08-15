@@ -1,0 +1,65 @@
+[
+    {
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5FpFMTUyfcfQfurpXTEpil3we5ABu6HE0duuOkTXWSSC-PCwUGj9ED_iGFtW-uF1H-c&usqp=CAU",
+        "name": "John Doe",
+        "username": "johndoe",
+        "content": "Excited to share my latest project with everyone!",
+        "likedCount": 150,
+        "comments": [
+            {
+                "profilePicture": "https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg",
+                "name": "Jane Smith",
+                "username": "janesmith",
+                "comment": "Great job, John! Can't wait to see more."
+            },
+            {
+                "profilePicture": "https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png",
+                "name": "Mike Johnson",
+                "username": "mikejohnson",
+                "comment": "This looks amazing! Keep up the good work."
+            }
+        ]
+    },
+    {
+        "profilePicture": "https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_kiri_16x9_1098_04_39d940d1.jpeg?region=240%2C0%2C1440%2C1080",
+        "name": "Emily Brown",
+        "username": "emilybrown",
+        "content": "Loving the new features in this app!",
+        "likedCount": 85,
+        "comments": [
+            {
+                "profilePicture": "https://avatar.iran.liara.run/public/92",
+                "name": "Chris Green",
+                "username": "chrisgreen",
+                "comment": "Totally agree, Emily! The UI is fantastic."
+            },
+            {
+                "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s",
+                "name": "Sarah White",
+                "username": "sarahwhite",
+                "comment": "I’ve been using it for a week now, and it’s been a game changer."
+            }
+        ]
+    },
+    {
+        "profilePicture": "https://robohash.org/stefan-one",
+        "name": "David Lee",
+        "username": "davidlee",
+        "content": "Just completed a 10k run! Feeling accomplished.",
+        "likedCount": 200,
+        "comments": [
+            {
+                "profilePicture": "https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000",
+                "name": "Laura Adams",
+                "username": "lauraadams",
+                "comment": "Congrats, David! That’s an amazing achievement."
+            },
+            {
+                "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJrctddrp7uic_Wrea3P8i7OsB_--o7hX7GQ&s",
+                "name": "Tom Baker",
+                "username": "tombaker",
+                "comment": "Impressive! Keep pushing your limits."
+            }
+        ]
+    }
+]
