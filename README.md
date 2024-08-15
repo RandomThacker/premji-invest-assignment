@@ -3,30 +3,25 @@
 
 ## Project Overview
 
-Premji Invest Assignment, Socials is a fully responsive social platform designed for easy microblogging. The platform features a dynamic and user-friendly interface, enabling users to create, like, and comment on posts, as well as interact with friends through a collapsible chat window.
+Premji Invest Assignment, social media wall using ReactJS. It features an engaging and intuitive interface that allows users to create posts, like and comment on content, and interact with friends via a collapsible chat window.
 
 ### Features
 
-- **Create Post Box**: Create a tweet and flex to friends.
+- **Post Creation**: Users can draft and share posts with friends.
 - **Post Cards**:
-  - Delete feature under the three dots menu.
-  - Like and comment feature.
-  - Modal to display the post fully along with comments.
-- **Comments**:
-  - Each comment can be liked.
-  - Nested commenting is supported.
+  - Option to delete posts via a menu with three dots.
+  - Ability to like and comment on posts.
 - **Home Screen**:
-  - Collapsible chat window.
-  - Collapsible friend list for improved UX.
-  - Smooth animations to reveal the friend list.
-  - Separate chat window opens in the bottom right corner for chatting, keeping the main content distraction-free.
+  - Collapsible chat window for better user experience.
+  - Collapsible friend list with smooth animation for easy access.
+  - A dedicated chat window appears in the bottom right corner, ensuring the main content remains the focus.
 - **Navigation Bar**:
-  - Dismissible notifications dropdown.
+  - Side navigation bar to go with modern ui.
   - Profile dropdown.
+  - Dropdown notification component with dynamic badge
 - **Messaging**:
-  - Fully functional messaging system with timestamps and message previews.
-  - Responsive design with a distinct layout for mobile devices.
-  - Design inspired by Instagram's mobile web app.
+  - Complete messaging functionality with timestamps and message previews.
+  - Design inspired by Linkedin and Twitter.
 
 ## Tech Stack
 
@@ -35,63 +30,19 @@ Premji Invest Assignment, Socials is a fully responsive social platform designed
   - React: ^18.2.0
   - Ant Design (antd): ^5.17.3
   - Tailwind CSS: ^3.4.3
+  - Typescript
 
 - **Utilities**:
 
-  - Moment: ^2.30.1
   - Tailwind Merge: ^2.3.0
   - @ant-design/icons: ^5.3.7
-  - @tabler/icons-react: ^3.5.0
 
 - **Build Tools**:
 
   - Vite: ^5.2.0
 
-- **Linting and Formatting**:
-
-  - ESLint: ^8.57.0
-  - Prettier: ^3.2.5
-  - Prettier Plugin TailwindCSS: ^0.5.14
-  - ESLint Plugins:
-    - react: ^7.34.1
-    - react-hooks: ^4.6.0
-    - react-refresh: ^0.4.6
-
-- **Type Definitions**:
-
-  - @types/react: ^18.2.66
-  - @types/react-dom: ^18.2.22
-
-- **CSS Processing**:
-  - PostCSS: ^8.4.38
-  - Autoprefixer: ^10.4.19
-
-## Routes Guide
-
-The application uses React Router for navigation. Below are the defined routes:
-
-- **Landing Page**: `/`
-
-  - Component: `LandingPage`
-  - Description: The main landing page of the application.
-  - Error Page: `ErrorPage`
-
-- **Mobile Messaging Page**: `/mobilemessages`
-
-  - Component: `MobileMessagingPage`
-  - Description: The page for viewing all mobile messages.
-
-- **Home Page**: `/home`
-
-  - Component: `Home`
-  - Description: The main home page where users see the feed and interact with posts.
-
-- **Mobile Chat Page**: `/chat/:id`
-
-  - Component: `MobileChatPage`
-  - Description: The page for individual chat sessions, identified by `id`.
-
-- **Error Page**: Used as the error element in case a route is not found or an error occurs.
+## Note
+Mobile responsiveness couldn't be implemented due to time constraints
 
 ## Installation and Running Locally
 
@@ -100,8 +51,8 @@ Follow these steps to run the project locally:
 1. **Clone the repository**:
 
    ```sh
-   git clone <repository-url>
-   cd premji-assignment
+   git clone <repository-ur>
+   cd premji-invest-assignment
    ```
 
 2. **Install dependencies:**
