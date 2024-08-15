@@ -1,5 +1,5 @@
 import './App.css'
-import TweetWall from './components/tweet-wall'
+import TweetWall from './components/tweet-wall/tweet-wall'
 
 function App() {
 

@@ -1,7 +1,7 @@
-import tweetData from "../utils/tweet-data.json";
-import { TweetType } from "../utils/tweet-card.types";
+import tweetData from "../../utils/tweet-data.json";
+import { TweetType } from "../../utils/tweet-card.types";
 import { useState, useEffect } from "react";
-import userData from "../utils/user-data.json";
+import userData from "../../utils/user-data.json";
 
 const useTweetWall = () => {
     const [tweets, setTweets] = useState<TweetType[]>([]);

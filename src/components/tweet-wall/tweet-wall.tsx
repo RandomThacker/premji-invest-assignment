@@ -1,5 +1,5 @@
 import React from "react";
-import TweetCard from "./tweet-card/tweet-card";
+import TweetCard from "../tweet-card/tweet-card";
 import useTweetWall from "./use-tweet-wall";
 
 const TweetWall: React.FC = () => {
